@@ -1,0 +1,199 @@
+/* Orders.css */
+
+.orders-container {
+  max-width: 800px; /* Increased max-width for better readability */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for the container */
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Tab Buttons */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Space between buttons */
+  margin-bottom: 20px;
+}
+
+.tab-buttons button {
+  padding: 12px 24px;
+  border: none;
+  background: #ff6f61; /* Primary color (orange) */
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tab-buttons button:hover {
+  background: #ff3b2f; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.tab-buttons button.active {
+  background: #ff3b2f; /* Active tab color */
+  box-shadow: 0px 4px 10px rgba(255, 111, 97, 0.3); /* Glow effect for active tab */
+}
+
+/* Order Card (Current Order) */
+.order-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.order-card h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.order-card p {
+  color: #666;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.order-card p b {
+  color: #333;
+}
+
+.order-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.order-card ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  font-size: 16px;
+}
+
+.order-card ul li:last-child {
+  border-bottom: none;
+}
+
+.order-card h3 {
+  color: #333;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* Order Item */
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.item-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-details p {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Track Order Button */
+.track-order-btn {
+  background: #ff6f61; /* Primary color */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.track-order-btn:hover {
+  background: #ff3b2f; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Order History Section */
+.order-history {
+  margin-top: 20px;
+}
+
+.history-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.history-card h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.history-card p {
+  color: #666;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.history-card p b {
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .orders-container {
+    padding: 15px;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab-buttons button {
+    width: 100%;
+  }
+
+  .order-card, .history-card {
+    padding: 15px;
+  }
+
+  .order-card h2 {
+    font-size: 22px;
+  }
+
+  .order-card p, .history-card p {
+    font-size: 14px;
+  }
+
+  .order-card ul li {
+    font-size: 14px;
+  }
+
+  .track-order-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+}

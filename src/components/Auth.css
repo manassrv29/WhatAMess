@@ -1,0 +1,187 @@
+/* Logo Container - Centering & Spacing */
+.logo-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  overflow: visible; /* Prevent clipping */
+  position: relative; /* Enable positioning */
+  top: -30px; /* Move the logo upwards */
+}
+
+/* Logo Image - Proper Size & Proportions */
+.auth-logo {
+  width: 200px; /* Set base width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Prevent distortion */
+  margin: 0 auto; /* Center horizontally */
+  border-radius: 15px;
+}
+
+/* Auth Container (ensure proper vertical centering) */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fe9737;
+  position: relative; /* Ensure proper stacking context */
+}
+
+/* Auth Box (container for form elements) */
+.auth-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  width: 500px;
+  text-align: center;
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Keep auth box above the logo */
+}
+
+
+/* Title */
+.auth-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d1663b;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Login Options */
+.auth-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.forgot-password {
+  color: #d1663b;
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #f7c948;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+  background-color: #e0b13d;
+}
+
+/* Signup Text */
+.signup-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-link {
+  color: #d1663b;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+/* ✅ Responsive Design: Ensure Mobile & Tablet Friendliness */
+@media (max-width: 400px) {
+  .auth-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .auth-title {
+    font-size: 20px;
+  }
+
+  .input-group input {
+    padding: 8px;
+  }
+
+  .login-btn, .signup-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* ✅ Add Smooth Focus Effects for Better Accessibility */
+.input-group input:focus {
+  outline: none;
+  border-color: #d1663b;
+  box-shadow: 0px 0px 5px rgba(209, 102, 59, 0.5);
+}
+
+/* ✅ Add a Hover Effect to the Input Fields */
+.input-group input:hover {
+  border-color: #e87d54;
+}
+
+/* ✅ Remember Me Checkbox Style */
+.remember-me {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #333;
+}
+
+.remember-me input {
+  margin-right: 8px;
+}
+
+/* ✅ Improve Button Click Effect */
+.login-btn:active, .signup-btn:active {
+  transform: scale(0.98);
+}
+
+/* ✅ Improve Terms of Service & Privacy Policy Link */
+.terms-text a {
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.terms-text a:hover {
+  color: #b84a2f;
+}

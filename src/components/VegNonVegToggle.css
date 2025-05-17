@@ -1,0 +1,66 @@
+/* 🥦🍗 Veg / Non-Veg Mode Toggle */
+.veg-nonveg-container {
+    position: absolute;
+    top: 350px; /* BELOW the Women Mode Toggle */
+    right: 20px; /* Align to the upper right */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px; /* Space between text and toggle */
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333; /* Ensures text visibility */
+}
+
+/* Switch Box */
+.veg-toggle-switch {
+    width: 52px; /* Increased size for better interaction */
+    height: 28px;
+    background-color: #d95622; /* Default: Red for Non-Veg */
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* When Veg Mode is ON */
+.veg-toggle-switch.veg {
+    background-color: #54b92c; /* Green for Veg Mode */
+}
+
+/* Toggle Circle */
+.veg-toggle-circle {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Circle Position in Veg Mode */
+.veg-toggle-switch.veg .veg-toggle-circle {
+    transform: translateX(30px);
+}
+
+/* 🥦 "Veg" / "Non-Veg" Text */
+.veg-text {
+    width: 50px; /* Ensure proper spacing */
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Adjust text color for better visibility */
+.veg-text.veg {
+    color: green; /* Green for Veg */
+}
+
+.veg-text.non-veg {
+    color: red; /* Red for Non-Veg */
+}

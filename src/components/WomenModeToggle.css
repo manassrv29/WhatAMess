@@ -1,0 +1,42 @@
+.women-mode-container {
+  position: absolute;
+  top: 300px; /* BELOW the navbar */
+  right: 20px; /* Align to the upper right */
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between text and toggle */
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333; /* Ensures text visibility */
+}
+
+.toggle-switch {
+  width: 52px;
+  height: 28px;
+  background-color: #e1cfc6; /* Creme color */
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-switch.women {
+  background-color: #ff69b4; /* Pink when Women Mode is ON */
+}
+
+.toggle-circle {
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch.women .toggle-circle {
+  transform: translateX(24px); /* Move circle to the right */
+}

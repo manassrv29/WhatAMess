@@ -1,0 +1,153 @@
+.mess-page-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px); /* Account for navbar and padding */
+  overflow-y: auto;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-title {
+  color: #2D3748;
+  margin-bottom: 16px !important;
+  font-weight: 600 !important;
+}
+
+.welcome-subtitle {
+  color: #718096;
+  margin-bottom: 24px !important;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto !important;
+}
+
+.mess-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.mess-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.mess-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.2);
+}
+
+.mess-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.mess-card-content {
+  padding: 16px;
+}
+
+.mess-card-name {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  color: #2D3748;
+  font-weight: 600;
+}
+
+.mess-card-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.mess-card-rating {
+  color: #FF6B35;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mess-card-cuisine {
+  color: #4A5568;
+  font-size: 0.9rem;
+  background: #F7FAFC;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.mess-card-price {
+  color: #48BB78;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.mess-card-speciality {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0;
+  border-top: 1px solid #EDF2F7;
+  padding-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .mess-page-container {
+    padding: 16px;
+  }
+
+  .welcome-section {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .welcome-title {
+    font-size: 1.75rem !important;
+  }
+
+  .welcome-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .mess-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+
+  .mess-card-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mess-container {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-title {
+    font-size: 1.5rem !important;
+  }
+
+  .welcome-subtitle {
+    font-size: 0.9rem !important;
+  }
+}
+  

@@ -1,0 +1,149 @@
+/* Navbar styles */
+.custom-navbar {
+  background-color: #fe9737;
+  padding-top: 40px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative; /* Needed for absolute positioning of .nav-box */
+  height: 120px; /* Adjust height if needed */
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-end; /* Moves navbar to the right */
+}
+
+.nav-box {
+  display: flex;
+  align-items: center;
+  background-color: #fee5ce; /* White background for the rectangle */
+  border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 20px; /* Space below nav-box */
+  right: 20px; /* Moves it to the right */
+  padding: 15px 30px;
+  gap: 25px; /* Adjust spacing */
+  opacity: 0;
+  animation: slideDown 0.5s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.nav-item.dropdown {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: #333333; /* Dark text color */
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out, color 0.3s;
+}
+
+.nav-link:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  color: #ff9100; /* Change to desired highlight color */
+}
+
+.nav-icon {
+  margin-right: 10px;
+  font-size: 35px;
+}
+
+.nav-item span {
+  font-size: 15px; /* Increase text size */
+  font-weight: bold; /* Make text bold */
+}
+
+.user-item {
+  margin-left: 50px; /* Aligns the user section to the right */
+}
+
+.user-link {
+  display: flex;
+  align-items: center;
+  color: #333333; /* Dark text color */
+  text-decoration: none;
+}
+
+.logo-container {
+  height: 40px; /* Set navbar height */
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Prevents navbar stretching */
+}
+
+.logo {
+  height: 100px; /* Increase logo size without affecting navbar */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures it doesn't stretch */
+  border-radius: 15%;
+  margin-left: 30px;
+  padding-bottom: 35px;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+  position: absolute;
+  background-color: #fee5ce;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  z-index: 1000;
+  top: 60px; /* Pushes dropdown further below header */
+  right: 0; /* Align to the right */
+  min-width: 160px; /* Set a minimum width */
+  margin-top: 10px; /* Extra spacing below header */
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #333333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa; /* Light background on hover */
+  color: #007bff; /* Change text color on hover */
+}
+
+/* Dropdown arrow (optional) */
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ffffff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-container {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,705 @@
+/* DPgooglemap.css - Styling for Delivery Partner Google Maps interface */
+
+/* Main container styling */
+.delivery-page {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Left Section - Delivery Details */
+.delivery-details {
+    width: 30vw;
+    height: 100vh;
+    background-color: #F4873D;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow-y: auto;
+}
+
+.content-container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 100px; /* Space for logo */
+}
+
+.delivery-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.delivery-header h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.delivery-badge {
+    display: flex;
+    align-items: center;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge.assigned {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge.picked-up {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.badge.delivered {
+    background-color: #343a40;
+    color: white;
+}
+
+/* Map Container */
+.map-container {
+    flex: 7; /* 70% width */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FCF1DD;
+    padding: 20px;
+    position: relative;
+}
+
+/* Google Map - Added .google-map class for compatibility with React component */
+.google-map {
+    width: 75%;
+    height: 75%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 6px solid white;
+    transition: all 0.3s ease;
+}
+
+.google-map:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: scale(1.01);
+}
+
+/* Logo Styling */
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.logo {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+/* Order Information */
+.order-info {
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-id {
+    background-color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.info-box {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.info-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.icon {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.restaurant-icon, .customer-icon {
+    font-size: 20px;
+}
+
+.info-content {
+    padding-left: 25px;
+    text-align: left;
+}
+
+.place-name {
+    font-weight: 600;
+    margin: 5px 0;
+    color: #212529;
+}
+
+.place-address {
+    font-size: 13px;
+    color: #6c757d;
+    margin: 5px 0 10px 0;
+}
+
+.action-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.action-btn:hover {
+    background-color: #e9ecef;
+}
+
+.call-icon {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+/* Order Summary */
+.order-summary {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.summary-title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.item-list {
+    margin-bottom: 10px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px dashed #dee2e6;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.total-amount, .payment-method {
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.special-instructions {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.instructions-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #343a40;
+}
+
+.instructions-text {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    border-left: 3px solid #F4873D;
+}
+
+/* Delivery Earnings */
+.delivery-earnings {
+    background-color: #F4873D;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    margin-top: 10px;
+}
+
+.earnings-amount {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.earnings-label {
+    font-size: 12px;
+}
+
+/* Delivery Status */
+.delivery-status-container {
+    width: 90%;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.status-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.status-btn:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    color: #6c757d;
+}
+
+.status-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 15;
+    overflow: hidden;
+}
+
+.status-option {
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.status-option:hover {
+    background-color: #f5f5f5;
+}
+
+.status-option.active {
+    background-color: #e9ecef;
+    font-weight: 600;
+    color: #F4873D;
+}
+
+/* Delivery Actions */
+.delivery-actions {
+    width: 90%;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.delivery-actions .action-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ETA Display */
+.eta-display {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.eta-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #F4873D;
+}
+
+.eta-label {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* Modal for Issue Reporting */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #212529;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.close-btn:hover {
+    color: #212529;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.issue-textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: none;
+}
+
+.issue-textarea:focus {
+    outline: none;
+    border-color: #F4873D;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.modal-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.styled-btn {
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cancel-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #212529;
+}
+
+.cancel-btn:hover {
+    background-color: #e9ecef;
+}
+
+.report-btn {
+    background-color: #F4873D;
+    border: none;
+    color: white;
+}
+
+.report-btn:hover {
+    background-color: #F4873D;
+}
+
+/* Navigation Button */
+.nav-button {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav-button:active {
+    transform: scale(0.95);
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-indicator {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #28a745;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 8px;
+}
+
+/* Additional styling for route information */
+.route-details {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.route-details-panel {
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.route-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detail-value {
+    font-weight: 600;
+    font-size: 16px;
+    color: #212529;
+}
+
+.detail-label {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* Info Window styling */
+.info-window {
+    padding: 8px;
+    max-width: 200px;
+}
+
+.info-window h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    color: #212529;
+}
+
+.info-window p {
+    margin: 5px 0;
+    font-size: 13px;
+    color: #6c757d;
+}
+
+/* Status animations */
+.animated-status {
+    animation: pulse 1.5s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .delivery-page {
+        flex-direction: column;
+    }
+
+    .delivery-details {
+        width: 100%;
+        max-height: 50vh;
+        overflow-y: auto;
+    }
+
+    .map-container {
+        height: 50vh;
+    }
+    
+    .order-info, .delivery-status-container, .delivery-actions, .eta-display {
+        width: 95%;
+    }
+    
+    .logo-container {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .content-container {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .delivery-details {
+        padding: 15px 10px;
+    }
+    
+    .delivery-header h2 {
+        font-size: 20px;
+    }
+    
+    .order-info {
+        padding: 12px;
+    }
+    
+    .info-title {
+        font-size: 14px;
+    }
+    
+    .place-name {
+        font-size: 14px;
+    }
+    
+    .place-address {
+        font-size: 12px;
+    }
+    
+    .action-btn {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    
+    .delivery-actions {
+        flex-direction: column;
+    }
+    
+    .eta-value {
+        font-size: 28px;
+    }
+    
+    .eta-label {
+        font-size: 12px;
+    }
+    
+    .modal-content {
+        width: 90%;
+    }
+    
+    .modal-header h3 {
+        font-size: 16px;
+    }
+    
+    .issue-textarea {
+        min-height: 100px;
+    }
+}

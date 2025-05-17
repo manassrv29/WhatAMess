@@ -1,0 +1,522 @@
+/* Reward.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Ensure the React root fills the screen */
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.left-panel {
+  width: 35%;
+  background-color: #FF6B35;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.right-panel {
+  width: 65%;
+  background-color: #fdf6e3;
+  padding: 20px;
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.logo-container {
+  text-align: center;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  margin: 0 auto 30px; /* Center horizontally */
+  padding: 10px; /* Add some padding */
+}
+
+.logo {
+  width: 80%;
+  height: auto;
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.page-title {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.rewards-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.rewards-total {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.rewards-title {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.points-value {
+  font-size: 48px;
+  font-weight: bold;
+  color: #FF6B35;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.star-icon {
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+.points-label {
+  font-size: 24px;
+  color: #666;
+  margin-left: 10px;
+}
+
+.redeem-btn {
+  background-color: #FF6B35;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.redeem-btn:hover {
+  background-color: #ff8559;
+}
+
+.redeem-btn:active {
+  transform: scale(0.98);
+}
+
+.history-container {
+  padding: 20px;
+}
+
+.history-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.history-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.history-item:hover {
+  transform: translateY(-2px);
+}
+
+.history-item-left {
+  flex: 1;
+}
+
+.history-item-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.history-item-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.history-item-points {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+}
+
+.positive {
+  color: #4CAF50;
+}
+
+.zoom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 10;
+}
+
+.zoom-btn {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  margin: 0 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.position-indicator {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.marker-icon {
+  margin-right: 5px;
+  color: #e67e22;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Loading Animation */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #FF6B35;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .left-panel, .right-panel {
+    width: 100%;
+    height: auto;
+  }
+  
+  .left-panel {
+    padding: 20px;
+  }
+  
+  .right-panel {
+    padding: 20px;
+  }
+  
+  .history-container {
+    padding: 10px;
+  }
+}
+
+/* --- STATIC DELIVERY COMPLETED REWARD PAGE STYLES --- */
+.reward-orange-bg {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #fff3e0 60%, #ffb974 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reward-orange-card.big-reward-box {
+  background: #fff8f3;
+  border-radius: 32px;
+  box-shadow: 0 12px 44px #ffb34744, 0 2px 12px #ff6b3555;
+  padding: 56px 44px 38px 44px;
+  max-width: 540px;
+  width: 100%;
+  text-align: center;
+  border: 3.5px solid #FF6B35;
+  animation: pop-in 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.reward-gift-icon {
+  font-size: 5.2rem;
+  margin-bottom: 18px;
+  color: #FF6B35;
+  filter: drop-shadow(0 2px 12px #ffb34755);
+  animation: pop-in 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.reward-title {
+  color: #FF6B35;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 1.1px;
+}
+
+.reward-desc {
+  color: #444;
+  font-size: 1.18rem;
+  margin-bottom: 28px;
+}
+
+.reward-history-section {
+  margin-top: 36px;
+  background: #fff3e0;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #ffb34722;
+  padding: 22px 20px 10px 20px;
+}
+
+.reward-history-title {
+  color: #FF6B35;
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.reward-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.reward-history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #333;
+  background: #fff8f3;
+  border-radius: 8px;
+  padding: 10px 18px;
+  box-shadow: 0 1px 6px #ffb34711;
+  animation: fadeInRow 0.6s;
+}
+
+.reward-history-coins {
+  color: #FF6B35;
+  font-weight: 700;
+  font-size: 1.13rem;
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.4); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInRow {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* --- MODERN BLACK THEME FOR REWARD PAGE --- */
+.reward-black-bg {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #181818 60%, #23272f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.reward-black-card {
+  background: #181818;
+  border-radius: 32px;
+  box-shadow: 0 8px 36px #000a;
+  padding: 56px 48px 48px 48px;
+  width: 480px;
+  max-width: 97vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid #23272f;
+  position: relative;
+  animation: fadeInPanel 0.7s cubic-bezier(.47,1.64,.41,.8);
+}
+
+.reward-gift-icon-black {
+  font-size: 3.3rem;
+  margin-bottom: 18px;
+  background: linear-gradient(120deg,#fff 60%,#f9d923 100%);
+  border-radius: 50%;
+  padding: 18px 20px 14px 20px;
+  box-shadow: 0 4px 24px #ffb34733;
+  color: #181818;
+  border: 2px solid #23272f;
+}
+
+.reward-title-black {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.reward-desc-black {
+  font-size: 1.25rem;
+  color: #ffb347;
+  font-weight: 600;
+  margin-bottom: 26px;
+}
+
+.reward-history-section-black {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.reward-history-title-black {
+  font-size: 1.13rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.reward-history-list-black {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.reward-history-item-black {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #23272f;
+  color: #fff;
+  font-size: 1.13rem;
+  font-weight: 600;
+  border-radius: 12px;
+  margin-bottom: 9px;
+  padding: 16px 22px;
+  box-shadow: 0 2px 8px #0002;
+  opacity: 0;
+  animation: fadeInPanel 0.6s cubic-bezier(.47,1.64,.41,.8) forwards;
+}
+
+.reward-history-item-black.earned .reward-history-coins-black {
+  color: #f9d923;
+}
+
+.reward-history-item-black.spent .reward-history-coins-black {
+  color: #ff4d4f;
+}
+
+.reward-history-coins-black {
+  font-size: 1.18rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.reward-delivery-btn-black {
+  margin-top: 16px;
+  padding: 14px 0 12px 0;
+  width: 100%;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #f9d923 60%, #ffb347 100%);
+  color: #181818;
+  font-size: 1.25rem;
+  font-weight: 900;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 16px #0002;
+  transition: background .2s, color .2s;
+}
+
+.reward-delivery-btn-black:hover {
+  background: linear-gradient(90deg, #ffb347 60%, #f9d923 100%);
+  color: #000;
+}
+
+@keyframes fadeInPanel {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}

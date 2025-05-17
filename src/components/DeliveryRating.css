@@ -1,0 +1,92 @@
+.rating-orange-container {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #fff3e0 60%, #ffb974 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rating-orange-card {
+  background: #fff8f3;
+  border-radius: 26px;
+  box-shadow: 0 10px 36px #ffb34744, 0 2px 8px #ff6b3555;
+  padding: 48px 38px 36px 38px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border: 2.5px solid #FF6B35;
+  animation: pop-in 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.rating-title {
+  color: #FF6B35;
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+.rating-field {
+  margin: 24px 0 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.13rem;
+  font-weight: 600;
+}
+.rating-label {
+  color: #222b45;
+  flex: 1;
+  text-align: left;
+}
+.rating-stars {
+  flex: 2;
+  text-align: left;
+}
+.star {
+  font-size: 2.1rem;
+  color: #ffb347;
+  cursor: pointer;
+  transition: color 0.18s, transform 0.13s;
+  margin-right: 6px;
+  user-select: none;
+}
+.star.filled {
+  color: #FF6B35;
+  transform: scale(1.18);
+  text-shadow: 0 2px 8px #ffb34755;
+}
+.rating-comment {
+  width: 100%;
+  min-height: 70px;
+  margin: 18px 0 16px 0;
+  border-radius: 10px;
+  border: 1.5px solid #FF6B35;
+  padding: 12px;
+  font-size: 1.08rem;
+  background: #fff3e0;
+  resize: vertical;
+  transition: border 0.2s;
+}
+.rating-comment:focus {
+  border: 2px solid #FF6B35;
+  outline: none;
+}
+.rating-submit-btn.orange {
+  background: linear-gradient(90deg, #FF6B35 60%, #ffb347 100%);
+  color: #fff;
+  border: none;
+  padding: 15px 48px;
+  border-radius: 10px;
+  font-size: 1.16rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #ffb30044;
+  transition: background 0.25s, transform 0.13s;
+}
+.rating-submit-btn.orange:hover {
+  background: linear-gradient(90deg, #ffb347 60%, #FF6B35 100%);
+  transform: scale(1.07);
+}
+@keyframes pop-in {
+  0% { transform: scale(0.4); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}

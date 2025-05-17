@@ -1,0 +1,284 @@
+/* âœ… Accept Order Page Styling */
+.accept-page {
+  display: flex;
+  height: 100vh;
+}
+
+/* âœ… Left Panel (Order Details) */
+.accept-details {
+  width: 30vw;  /* Keep it fixed to 30% of the screen */
+  height: 100vh; 
+  background-color: #F4873D;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* âœ… Content Container */
+.content-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px; /* Space for logo */
+}
+
+/* âœ… Map Container */
+.map-container {
+  flex: 7; /* 70% width */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FCF1DD; /* Plain background color as requested */
+  padding: 20px;
+  position: relative;
+}
+
+/* âœ… Google Map Styling */
+.google-map {
+  width: 75%;
+  height: 75%;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 6px solid white;
+  transition: all 0.3s ease;
+}
+
+.google-map:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transform: scale(1.01);
+}
+
+/* âœ… Logo Styling */
+.logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.logo {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+/* âœ… Hover Effect for Logo */
+.logo-container:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* âœ… Fancy Box for "For - Manas" */
+.order-box {
+  background: linear-gradient(145deg, #e3e3e3, #ffffff);
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+  width: 80%;
+}
+
+.order-box:hover {
+  transform: scale(1.05);
+}
+
+/* âœ… Location Input & Distance */
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.location-input {
+  width: 60%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.location-input:focus {
+  outline: none;
+  border-color: #ff7e5f;
+  box-shadow: 0 0 5px rgba(255, 126, 95, 0.5);
+}
+
+/* âœ… Buttons Styling */
+.styled-btn {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.styled-btn:hover {
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+  transform: scale(1.05);
+}
+
+/* âœ… Search Button Styling */
+.search-btn {
+  background: linear-gradient(to right, #4caf50, #45a049);
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.search-btn:hover {
+  background: linear-gradient(to right, #45a049, #4caf50);
+}
+
+/* âœ… Calculate Route Button */
+.button-container {
+  margin: 15px 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 90%;
+}
+
+.button-container .styled-btn {
+  background: linear-gradient(to right, #3498db, #2980b9);
+  padding: 10px 15px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.button-container .styled-btn:hover {
+  background: linear-gradient(to right, #2980b9, #3498db);
+}
+
+/* âœ… Route Info Box */
+.route-info-box {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin: 10px 0 15px 0;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #3498db;
+  transition: all 0.3s ease;
+}
+
+.route-info-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.info-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.info-value {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* âœ… Accept Button */
+.accept-btn {
+  background: linear-gradient(to right, #e74c3c, #c0392b);
+  padding: 12px 25px;
+  font-size: 16px;
+  margin-top: 15px;
+  width: 90%;
+}
+
+.accept-btn:hover {
+  background: linear-gradient(to right, #c0392b, #e74c3c);
+}
+
+/* âœ… Map Controls */
+.map-controls button {
+  transition: all 0.3s ease;
+}
+
+.map-controls button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* âœ… Responsive Design */
+@media (max-width: 768px) {
+  .accept-page {
+    flex-direction: column;
+  }
+  
+  .accept-details {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+  
+  .content-container {
+    margin-top: 70px;
+  }
+
+  .map-container {
+    height: 60vh;
+  }
+  
+  .google-map {
+    width: 90%;
+    height: 80%;
+  }
+  
+  .logo-container {
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .location-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .route-info-box {
+    width: 90%;
+  }
+}
